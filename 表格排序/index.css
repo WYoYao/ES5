@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑';
+    font-size: 14;
+    /*静止用户选中文字*/
+    -webkit-user-select: none;
+}
+
+.box {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #008000;
+    /*10像素的圆角*/
+    border-radius: 10px;
+    /*x轴偏移3像素，y轴偏移3像素 模糊半径10像素 扩展半径0 颜色*/
+    box-shadow: 3px 3px 10px 0 #DBEEBD;
+}
+#tab thead{
+    background: #008000;
+    color: #FFFFFF;
+}
+#tab thead tr{
+    height: 35px;
+}
+#tab thead tr th{
+    width: 100px;
+    text-align: center;
+    /*添加手型*/
+    cursor: pointer;
+}
+#tab tbody tr{
+    height: 30px;
+}
+#tab tbody tr td{
+    text-align: center;
+    width: 100px;
+}
+
+#tab tbody tr:nth-child(even){
+    background-color: lightgreen;
+}
