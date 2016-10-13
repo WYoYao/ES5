@@ -1,0 +1,31 @@
+[{
+    "name":"令狐冲",
+    "age":36,
+    "power":97,
+    "sex":1
+},{
+    "name":"任盈盈",
+    "age":24,
+    "power":12,
+    "sex":0
+},{
+    "name":"东方不败",
+    "age":58,
+    "power":89,
+    "sex":0
+},{
+    "name":"香菇",
+    "age":19,
+    "power":90,
+    "sex":1
+},{
+    "name":"蓝瘦",
+    "age":26,
+    "power":97,
+    "sex":1
+},{
+    "name":"Leo",
+    "age":24,
+    "power":100,
+    "sex":1
+}]
