@@ -1,0 +1,13 @@
+let str='leo123leo456leo789';
+let reg=/\d+/g;
+console.log(reg.lastIndex);
+reg.test(str);
+console.log(reg.lastIndex);
+reg.exec(str);
+console.log(reg.lastIndex);
+reg.exec(str);
+console.log(reg.lastIndex);
+reg.exec(str);
+console.log(reg.lastIndex);
+reg.exec(str);
+console.log(reg.lastIndex);
