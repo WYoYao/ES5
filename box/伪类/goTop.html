@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            font-family:'微软雅黑';
+            font-size:14px;
+            -webkit-user-select:none;
+        }
+        html,body{
+            width:100%;
+            height:500%;
+            background:#11c900;
+            background:-webkit-linear-gradient(top,#11c900,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgreen,lightpink,lightsalmon,lightseagreen);
+            background:linear-gradient(top,#11c900,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgreen,lightpink,lightsalmon,lightseagreen);
+        }
+        a{
+            color:#000;
+            text-decoration:none;
+        }
+        a:hover,a:active,a:target,a:visited{
+            color:#000;
+            text-decoration:none;
+        }
+
+        #golink{
+            display:block;
+            width:30px;
+            height:30px;
+            line-height:30px;
+            position:fixed;
+            bottom:20%;
+            right:5%;
+            border:1px solid green;
+            text-align:center;
+            border-radius:50%;
+            background:#FFF;
+            opacity:0.2;
+            fliter:alpha(opacity=20);
+        }
+        #golink:hover{
+            background:#999;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:void 0;" id="golink">GO</a>
+</body>
+<script src="goTop.js" type="text/javascript" charset="utf-8"></script>
+</html>

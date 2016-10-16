@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			font-size: 14px;
+		}
+		
+		#box {
+			margin: 30px auto;
+			width: 300px;
+			height: 300px;
+			border: 10px solid green;
+			line-height: 30px;
+			overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		At break of day in hope we rise we speak your name we lift our eyes tune our hearts to your beat where we walk there you'll
+		be with fire in our eyes our lives, a light your love untamed it's blazing out the streets will glow forever bright your
+		glory is breaking through the night you will never fade away your love is here to stay by my side in my life shining through
+		me everyday (x2) chorus: you wake within me, wake within me you're in my heart forever (x2) with fire in our eyes our lives,
+		a light your love untamed it's blazing out streets will glow forever bright your glory is breaking through the night you
+		will never fade away your love is here to stay by my side in my life shining through me everyday (x2) chorus: you wake
+		within me wake within me you're in my heart forever (x2) forever, forever, forever in your love (x3) forever, forever,
+		forever we know that you will never fade away your love is here to stay by my side in my life shining through me everyday
+		(x2) chorus: you wake within me wake within me you're in my heart forever (x2)
+	</div>
+    <script type="text/javascript" charset="utf-8">
+        let box=document.getElementById('box');
+        // box.scrollTop 最小值为0;
+        console.log(box.scrollTop)
+        // box.scrollTop 最大值为;
+        console.log(box.scrollHeight-box.clientHeight);
+    </script>
+</body>
+
+</html>

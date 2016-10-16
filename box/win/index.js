@@ -18,6 +18,6 @@ var box=document.getElementById('box');
 console.log(getCSS(box,'fontFamily'));
 console.log(getCSS(box,'border'));
 
-console.log(box.currentStyle[''])
+console.log(box.currentStyle['filter'])
 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            font-size:14px;
+            font-family:'微软雅黑';
+        }
+        #outer{
+            margin:51px auto;
+            width:300px;
+            height:300px;
+            padding:52px;
+            border:10px solid #000;
+            background:orange;
+        }
+        #inner{
+            width:180px;
+            height:180px;
+            padding:53px;
+            border:10px solid #000;
+            background:green;
+        }
+        #center{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <div id="center">
+
+            </div>
+        </div>
+    </div>
+    <script src="offset.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var outer=document.getElementById('outer'),inner=document.getElementById('inner'),center=document.getElementById('center');
+
+        outer.style.position='relative';
+        inner.style.position='relative';
+
+        console.log(getOffset(center));
+
+        
+
+
+
+    </script>
+</body>
+</html>

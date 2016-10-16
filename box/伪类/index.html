@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            font-family:'微软雅黑';
+            font-size:14px;
+        }
+        .box{
+            width:300px;
+            margin:20px auto;
+            padding:30px;
+            border:1px solid green;
+        }
+        .box p{
+            line-height:30px;
+        }
+
+        .box p:before{
+            display:block;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            content:'前面虚拟标签';
+            background:lightblue;
+        }
+        .box p:after{
+            display:block;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            content:'后面虚拟标签';
+            background:lightgreen;
+        }
+        .clear{
+            zoom:0;
+        }
+
+        .clear:after{
+            display:block;
+            height:0;
+            width:0;
+            content:'';
+            clear:both;
+            overflow:hidden;
+        }
+
+        ul,li{
+            list-style:none;
+        }
+        .list{
+            width:300px;
+            margin:20px auto;
+            border:1px solid #000;
+            padding:30px;
+
+        }
+        .list li{
+            width:100px;
+            float:left;
+            height:100px;
+            background:lightyellow;
+        }
+        .list li:nth-child(4n+1){
+            background:red;
+        }
+        .list li:nth-child(4n+2){
+            background:orange;
+        }
+        .list li:nth-child(4n+3){
+            background:yellow;
+        }
+        .list li:nth-child(4n+4){
+            background:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id='boxP'>谢娜乱插话被央视主持人打脸 汪涵何炅不淡定</p>
+    </div>
+    <ul class="list clear">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="text/javascript" charset="utf-8">
+        var boxP=document.getElementById('boxP');
+        <!--标准浏览器可以获取-->
+        console.log(window.getComputedStyle(boxP,'before').content);
+        console.log(window.getComputedStyle(boxP,'after').height);
+    </script>
+</body>
+</html>

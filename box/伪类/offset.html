@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            font-size:14px;
+            font-family:'微软雅黑';
+        }
+        #outer{
+            margin:50px auto;
+            width:300px;
+            height:300px;
+            padding:50px;
+            border:10px solid #000;
+            background:orange;
+        }
+        #inner{
+            width:180px;
+            height:180px;
+            padding:50px;
+            border:10px solid #000;
+            background:green;
+        }
+        #center{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <div id="center">
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var outer=document.getElementById('outer'),inner=document.getElementById('inner'),center=document.getElementById('center');
+
+        //想要改变父级参照物,可以通过position 来进行改变。
+
+        let arr= ['relative','absolute','fixed','static','initial','inherit'].map((item)=>{
+            outer.style.position=item;
+            return inner.offsetParent;
+        })
+        // 只有relative，absolute，fixed 可以修改其的内容
+        //console.log(arr);
+
+        /*
+        * 修改的relative 之后不会的影响自身的参照物，但是可以影响子级的父级参照物
+        */
+
+        // 修改的outer 之后的父级参照物
+        /**
+        * 修改的了的outer 之后里面的子节点的offset的父级参照物都修改成为了outer;
+        */
+        outer.style.position='relative';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+        /**
+        * 修改的了的inner 之后里面的子节点的offset的父级参照物修改成为了inner;
+        */
+        inner.style.position='relative';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+
+
+        /*
+        * 修改的fixed 之后会将自身的参照物设置的null，同时也影响子级的父级参照物
+        */
+        // 修改的outer 之后的父级参照物
+        /**
+        * 修改的了的outer 之后里面的子节点的offset的父级参照物都修改成为了outer,自己本身的父级参照物修改成了null;
+        */
+        outer.style.position='fixed';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+        /**
+        * 修改的了的inner 之后里面的子节点的offset的父级参照物修改成为了inner,自己本身的父级参照物修改成了null;
+        */
+        inner.style.position='fixed';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+
+        /**
+        * 修改的了的outer 之后里面的子节点的offset的父级参照物都修改成为了outer;
+        */
+        outer.style.position='absolute';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+        /**
+        * 修改的了的inner 之后里面的子节点的offset的父级参照物修改成为了inner;
+        */
+        inner.style.position='absolute';
+        //console.log([outer,inner,center].map((item)=>item['offsetParent']))
+
+        
+
+
+
+    </script>
+</body>
+</html>
