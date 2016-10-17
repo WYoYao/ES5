@@ -49,3 +49,5 @@ let getCSS=(curEle, attr)=> {
         return reg.test(result)?parseFloat(result):result;
     }
 }
+
+

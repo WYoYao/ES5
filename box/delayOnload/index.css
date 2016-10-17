@@ -1,0 +1,20 @@
+*{
+        margin:0;
+        padding:0;
+        font-size:14px;
+        font-family:'微软雅黑';
+    }
+    .banner{
+        margin:10px auto;
+        width:250px;
+        height:164px;
+        border:1px solid green;
+        /*给当前区域一个默认图占位*/
+        background: url('http://img14.360buyimg.com/da/jfs/t3691/139/45845976/17337/328c484c/57fcb9e8N61df66d9.jpg') no-repeat center center;
+    }
+    .banner img{
+        /*IE下没有图片的时候有碎图，没加载的时候不显示*/
+        display:none;
+        width:100%;
+        height:100%;
+    }
