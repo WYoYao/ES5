@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '微软亚黑';
+    font-size: 14px;
+    -webkit-user-select: none;
+}
+ul,li{
+    list-style: none;
+}
+#box{
+    width: 500px;
+    height: auto;
+    margin: 10px auto 0;
+}
+#box ul{
+    position: relative;
+    top: 1px;
+    /*1.清除子元素对父级元素的影响*/
+    /*overflow: hidden;*/
+}
+/*使用伪类清除浮动*/
+#box ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#box ul li{
+    float: left;
+    margin-right: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid green;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+#box ul li.selected{
+    background: lightblue;
+    border-bottom-color: lightblue;
+}
+
+#box div{
+    height: 150px;
+    line-height: 150px;
+    background: lightblue;
+    border: 1px solid green;
+    text-align: center;
+    display: none;
+    /*2.给本元素设置样式，清楚前面元素浮动的影响*/
+    /*clear: box;*/
+}
+#box div.selected{
+    display: block;
+}
+
