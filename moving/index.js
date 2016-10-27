@@ -1,17 +1,48 @@
 
-let box=document.querySelector('.box');
-let minLeft=0;
-let maxLeft=(document.documentElement.clientWidth || document.body.clientWidth)-box.offsetWidth;
+var box = document.querySelector('.box');
+var minLeft = 0;
+var maxLeft = (document.documentElement.clientWidth || document.body.clientWidth) - box.offsetWidth;
+var btnLeft = document.getElementById('btnLeft');
+var btnRight = document.getElementById('btnRight');
 
-
-let moving=(target)=>{
-    let timer=setInterval(()=>{
+var timer;
+function moving(target){
+    console.log('out',target);
+    function _moving(){
+        console.log('in',target);
+        // clearInterval(timer);
+        var left = parseInt(getComputedStyle(box).left);
+        
         //←
-        if(getComputedStyle(box).left>target){
-            box.style.left=getComputedStyle(box).left-10;
+        if (left > target) {
+            if (left - 1 < target) {
+                box.style.left = target + 'px';
+                return;
+            } else {
+                box.style.left = left - 1 + 'px';
+            }
+        } else if (left < target) {
+            //→
+            if (left + 1 >= target) {
+                box.style.left = target + 'px';
+                return;
+            } else {
+                box.style.left = left + 1 + 'px';
+            }
         }else{
-        //→
-            box.style.left=getComputedStyle(box).left-10;
+            return;
         }
-    },10);
+        // console.log('timer',target);
+        timer = setTimeout(_moving, 10);
+    };
+    timer = setTimeout(_moving, 10);
 }
+
+
+btnLeft.onclick =function(){
+     moving(minLeft)
+};
+btnRight.onclick = function(){
+    moving(maxLeft)
+};
+
