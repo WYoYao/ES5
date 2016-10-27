@@ -1,50 +1,59 @@
-*{
-        margin:0;
-        padding:0;
-        font-size:14px;
-        font-family:'微软雅黑';
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: '微软雅黑';
 }
-ul,li{
+
+ul,
+li {
     list-style: none;
 }
-img{
+
+img {
     display: block;
     border: none;
 }
+
+
 /*移动端最外层容器不设定固定的宽高*/
-.news{
+
+.news {
     padding: 10px;
 }
-.news li{
+
+.news li {
     position: relative;
     height: 60px;
     padding: 10px 0;
     border: 1px dashed #ccc;
 }
-.news li>div:nth-child(1){
+
+.news li>div:nth-child(1) {
     position: absolute;
     top: 10px;
     left: 0;
     width: 75px;
     height: 60px;
-    background: url('../images/true.png') no-repeat center center; 
-    background-size: 100% 100%;
-    background-color:#ccc;
+    background: #dedede url('../images/true.png') no-repeat center center;
+    background-size: 40px 40px;
 }
 
-.news li>div:nth-child(1) img{
+.news li>div:nth-child(1) img {
     width: 100%;
     height: 100%;
     display: none;
     opacity: 0;
     filter: alpha(opacity=0);
 }
-.news li>div:last-child{
+
+.news li>div:last-child {
     height: 60px;
     /*距左第一个DIV的宽度，同时多出10px 距离*/
     margin-left: 85px;
 }
-.news li>div:last-child h2{
+
+.news li>div:last-child h2 {
     line-height: 20px;
     height: 20px;
     /*超出隐藏*/
@@ -54,7 +63,8 @@ img{
     /*不换行*/
     white-space: nowrap;
 }
-.news li>div:last-child p{
+
+.news li>div:last-child p {
     height: 20px;
     line-height: 20px;
     font-size: 12px;
