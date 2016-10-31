@@ -91,3 +91,5 @@ let bindHtml=(list)=>{
     getData(bindHtml);
 
 })();
+
+
